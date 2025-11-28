@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seu Nome - Portfólio</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+
+    <header class="hero" id="home">
+        <nav class="navbar">
+            <div class="logo"></div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">Sobre</a></li>
+                <li><a href="#services">Trabalhos</a></li>
+                <li><a href="#contact">Contato</a></li>
+            </ul>
+        </nav>
+    
+    </header>
+
+    <section class="about-me" id="about">
+        <div class="about-image-container">
+            <img src="imgs/Foto site.png" class="profile-photo">
+        </div>
+        <div class="about-content">
+            <span class="section-subtitle">Sobre mim</span>
+            <h2>Arthur Moura de Araújo</h2>
+            <p>Sou estudante do curso Técnico em Internet das Coisas no SENAC São Paulo, onde desenvolvo habilidades em programação, eletrônica e redes de comunicação. Tenho paixão por tecnologia e inovação, buscando sempre aplicar meus conhecimentos em projetos práticos e desafiadores. <br>
+             Atualmente sou Jovem Aprendiz no Banco BS2, no setor de Payments, com foco em análise de dados, prevenção a fraudes e gestão de Chargebacks. 
+            </p>
+            </p>
+
+            <div class="skills-bar">
+                <h3>Power BI</h3>
+                <div class="bar"><div class="progress" style="width: 90%;"></div></div>
+                <h3>Internet das Coisas (IoT)</h3>
+                <div class="bar"><div class="progress" style="width: 80%;"></div></div>
+                <h3>Análise de Dados</h3>
+                <div class="bar"><div class="progress" style="width: 75%;">75%</div></div>
+            </div>
+
+            <div class="about-buttons">
+                <a href="Curriculo/CV-Arthur 05-2025.pdf" class="btn primary-btn" download>Baixar CV</a>
+                <a href="https://www.linkedin.com/in/arthurmaraujo" class="btn primary-btn">LinkedIn</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="services" id="services">
+        <span class="section-subtitle">Grade de Matérias</span>
+        <h2>Trabalhos por Área do Saber</h2>
+        <div class="services-container">
+            <div class="service-item">
+                <i class="fas fa-language"></i>
+                <h3>Linguagens</h3>
+                <p>Português, Inglês, Artes, Ed. Física. <br>Trabalho: Infográfico Artístico.</p>
+                <a href="Matérias/infografico art.png">Ver Trabalho</a>
+            </div>
+            <div class="service-item">
+                <i class="fas fa-flask"></i>
+                <h3>Ciências da Natureza</h3>
+                <p>Biologia, Química, Física. <br>Trabalho: Aula invertida - Álcool e Fenóis.</p>
+                <a href="https://www.canva.com/design/DAGxCfyKG6Q/r4I7eg_HzNff8aqUFRV9Pw/edit?classId=2e1df77f-61ff-4ad1-b272-fd3120ad7d05&assignmentId=cef69293-c0c9-4c30-ae6e-75f10ebb7d7a&submissionId=041efc11-99ec-2742-9ed6-821322099b27">Ver Trabalho</a>
+            </div>
+            <div class="service-item">
+                <i class="fas fa-calculator"></i>
+                <h3>Matemática</h3>
+                <p>Matemática Financeira. <br>Trabalho: Cálculo de Juros Simples e Compostos.</p>
+                <a href="#">Ver Trabalho</a>
+            </div>
+            <div class="service-item">
+                <i class="fas fa-user-friends"></i>
+                <h3>Ciências Humanas</h3>
+                <p>História, Geografia, Sociologia, Filosofia. <br>Trabalho: Análise de Cenas do filme Marighella.</p>
+                <a href="Matérias/Análise de cenas - Marighella.pdf">Ver Trabalho</a>
+            </div>
+            <div class="service-item">
+                <i class="fas fa-microchip"></i>
+                <h3>Técnico/Profissionalizante</h3>
+                <p>IoT<br>Desafio do sistema de banco: Código de um sistema bancário.</p>
+                <a href="Matérias/ContaBanco.java">Ver Trabalho</a>
+            </div>
+            <div class="service-item voting-ranking">
+                <i class="fas fa-trophy"></i>
+                <h3>Melhor Trabalho (Votação)</h3>
+                <p>O trabalho mais votado pelos visitantes será exibido aqui. Votos totais: <span id="total-votes">0</span></p>
+                <p id="best-work-title">Carregando Ranking...</p>
+                <a href="votacao.html" class="btn primary-btn">Votar Agora</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="contact" id="contact"> 
+        <h2>Formulário de Contato</h2>
+        <form class="contact-form" id="contact-form" action="/submit-contact" method="POST">
+            <div class="form-group">
+                <input type="text" id="name" name="name" placeholder="Seu Nome" required>
+            </div>
+            <div class="form-group">
+                <input type="email" id="email" name="email" placeholder="Seu E-mail" required>
+            </div>
+            <div class="form-group">
+                <textarea id="message" name="message" rows="6" placeholder="Sua Mensagem" required></textarea>
+            </div>
+            <button type="submit" class="btn primary-btn">Enviar Mensagem</button>
+            <p id="form-message" style="display: none; margin-top: 15px;"></p>
+        <form class="contact-form" id="contact-form" action="enviar.php" method="POST">
+            </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Arthur Moura de Araújo. Portfólio. Todos os direitos reservados.</p>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

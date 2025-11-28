@@ -1,0 +1,361 @@
+/* Importação da Fonte (Open Sans) e Reset Básico */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap');
+
+:root {
+    --primary-color: #007bff; /* Azul vibrante para botões e links */
+    --secondary-color: #f7f7f7; /* Cor de fundo de seções claras */
+    --text-color: #333;
+    --light-text: #fff;
+    --dark-bg: #222;
+    --transition: all 0.3s ease;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    line-height: 1.6;
+    color: var(--text-color);
+    background-color: var(--light-text);
+}
+
+a {
+    text-decoration: none;
+    color: var(--primary-color);
+    transition: var(--transition);
+}
+
+a:hover {
+    color: #0056b3;
+}
+
+/* --- ESTILO DO CABEÇALHO (HERO) --- */
+.hero {
+    /* Substitua pelo caminho da sua imagem de fundo */
+     background: url('foto fundo.jpg') no-repeat center center/cover;
+    color: var(--light-text);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    /* Efeito de sobreposição para escurecer a imagem */
+    z-index: 1; 
+}
+
+.hero::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4); /* Escurece a imagem */
+    z-index: -1;
+}
+
+/* --- BARRA DE NAVEGAÇÃO (NAVBAR) --- */
+.navbar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+    background-color: rgb(0, 0, 0); /* Fundo semi-transparente */
+    color: var(--light-text);
+    z-index: 1000;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+}
+
+.nav-links li {
+    margin-left: 30px;
+}
+
+.nav-links a {
+    color: var(--light-text);
+    font-weight: 600;
+    padding: 5px 0;
+    position: relative;
+}
+
+.nav-links a:hover {
+    color: var(--primary-color);
+}
+
+/* --- SEÇÃO GERAL --- */
+section {
+    padding: 80px 50px;
+    text-align: center;
+}
+
+.section-subtitle {
+    display: block;
+    font-size: 0.9rem;
+    color: var(--primary-color);
+    margin-bottom: 5px;
+    font-weight: 600;
+}
+
+h2 {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    font-weight: 700;
+}
+
+/* --- SEÇÃO SOBRE MIM (ABOUT ME) --- */
+.about-me {
+    display: flex;
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: left;
+    gap: 50px;
+    align-items: flex-start;
+}
+
+.about-image-container {
+    flex: 0 0 350px; /* Largura fixa da imagem lateral */
+}
+
+.profile-photo {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.about-content {
+    flex-grow: 1;
+}
+
+.about-content h2 {
+    margin-top: 0;
+    font-size: 2rem;
+    color: var(--dark-bg);
+}
+
+.about-content p {
+    margin-bottom: 30px;
+}
+
+/* Barras de Habilidades */
+.skills-bar {
+    margin-bottom: 30px;
+}
+
+.skills-bar h3 {
+    font-size: 1rem;
+    margin: 15px 0 5px 0;
+}
+
+.bar {
+    background-color: var(--secondary-color);
+    height: 15px;
+    border-radius: 7px;
+    overflow: hidden;
+}
+
+.progress {
+    height: 100%;
+    background-color: var(--primary-color);
+    color: var(--light-text);
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding-right: 10px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    transition: width 1s ease-in-out;
+}
+
+/* Botões */
+.btn {
+    padding: 10px 25px;
+    border-radius: 5px;
+    font-weight: 600;
+    text-transform: uppercase;
+    transition: var(--transition);
+    display: inline-block;
+    margin-right: 15px;
+    border: 2px solid transparent;
+}
+
+.primary-btn {
+    background-color: var(--primary-color);
+    color: var(--light-text);
+}
+
+.primary-btn:hover {
+    background-color: #0056b3;
+    color: var(--light-text);
+}
+
+.secondary-btn {
+    background-color: transparent;
+    border-color: var(--primary-color);
+    color: var(--primary-color);
+}
+
+.secondary-btn:hover {
+    background-color: var(--primary-color);
+    color: var(--light-text);
+}
+
+/* --- SEÇÃO TRABALHOS (SERVICES) --- */
+.services {
+    background-color: var(--secondary-color);
+}
+
+.services-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.service-item {
+    background-color: var(--light-text);
+    padding: 30px;
+    flex-basis: calc(33.333% - 20px); /* 3 itens por linha */
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    text-align: center;
+    transition: var(--transition);
+}
+
+.service-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.service-item i {
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    margin-bottom: 15px;
+}
+
+.service-item h3 {
+    font-size: 1.25rem;
+    margin-bottom: 10px;
+    color: var(--dark-bg);
+}
+
+.service-item p {
+    font-size: 0.9rem;
+    color: #666;
+    margin-bottom: 15px;
+}
+
+.service-item a {
+    display: block;
+    margin-top: 10px;
+    font-weight: 600;
+}
+
+.voting-ranking {
+    border: 2px solid var(--primary-color); /* Destaque para a seção de ranking */
+}
+
+/* --- SEÇÃO CONTATO --- */
+.contact {
+    background-color: var(--light-text);
+}
+
+.contact-form {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 30px;
+    background-color: var(--secondary-color);
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    text-align: center;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
+    transition: border-color 0.3s;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    border-color: var(--primary-color);
+    outline: none;
+}
+
+.contact-form textarea {
+    resize: vertical;
+}
+
+/* --- RODAPÉ --- */
+footer {
+    background-color: var(--dark-bg);
+    color: #aaa;
+    text-align: center;
+    padding: 20px 0;
+    font-size: 0.8rem;
+}
+
+/* --- MEDIA QUERIES (Responsividade) --- */
+@media (max-width: 992px) {
+    .about-me {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    .about-image-container {
+        flex: 0 0 auto;
+        max-width: 300px;
+        margin-bottom: 30px;
+    }
+    .service-item {
+        flex-basis: calc(50% - 20px); /* 2 itens por linha em telas médias */
+    }
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        padding: 15px 20px;
+    }
+    .nav-links {
+        margin-top: 10px;
+    }
+    .nav-links li {
+        margin-left: 15px;
+    }
+    .hero-content h1 {
+        font-size: 2.5rem;
+    }
+    .service-item {
+        flex-basis: 100%; /* 1 item por linha em telas pequenas */
+    }
+}
