@@ -16,7 +16,7 @@ Inicie os Serviços: Certifique-se de que os serviços Apache e MySQL estejam em
 3. Configuração do Banco de Dados (Para o Formulário de Contato)
 O arquivo php/enviar.php está configurado para salvar as mensagens no banco de dados.
 
-Acesse o phpMyAdmin (geralmente via http://localhost/phpmyadmin/).
+Acesse o phpMyAdmin (http://localhost/phpmyadmin/).
 
 Crie um novo banco de dados chamado: portfolio_db.
 
