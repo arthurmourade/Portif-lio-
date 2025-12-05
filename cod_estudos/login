@@ -1,0 +1,17 @@
+usuariocorreto = "admin"
+senhacorreta = "1234"
+'''credenciais fixas'''
+
+usuario_digitado = input("Digite o seu usuário: ")
+senha_digitado = input("Digite sua senha: ")
+
+if usuario_digitado == usuariocorreto:
+    if senha_digitado == senha_digitado:
+        print("Login realizado com sucesso!")
+    else:
+        print("Senha incorreta")
+    
+else:
+    print("Usuário inválido.")
+    
+

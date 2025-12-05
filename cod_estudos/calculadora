@@ -1,0 +1,27 @@
+nome = input("Qual o seu nome? ")
+
+print("Olá, " + nome + "!" + " Selecione dois números a seguir")
+
+num1 = int(input("Selecione o primeiro número: "))
+num2 = int(input("Selecione o segundo número: "))
+
+print("1 - soma")
+print("2 - subtração")
+print("3 - multiplicação")
+print("4 - divisão")
+
+operacao = int(input("Perfeito! Agora selecione a operação que deseja efetuar: "))
+
+if operacao == 1:
+    resultado = num1 + num2
+elif operacao == 2:
+    resultado = num1 - num2
+elif operacao == 3:
+    resultado = num1 * num2
+elif operacao == 4:
+    resultado = num1 / num2
+else:
+    print("Operação inválida")
+    resultado = None
+if resultado is not None:
+    print((f"Resultado: {resultado}"))

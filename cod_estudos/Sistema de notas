@@ -1,0 +1,14 @@
+nome = input("Olá, aluno! Digite o seu nome para consultarmos sua nota!: ")
+
+nota1 = float(input("Certo, " + nome + "!" " Digite a primeira nota que aparece no seu boletim!: "))
+nota2 =float(input("Digite a segunda nota que aparece no seu boletim!: "))
+nota3 = float(input("Digite a terceira nota que aparece no seu boletim!: "))
+
+media = (nota1 + nota2 + nota3) / 3
+
+if media >= 7:
+    print(f"Sua média é de: {media:.2f} Aprovado! Parabéns")
+elif media >= 5:
+    print(f"Sua média é de: {media:.2f} Recuperação")
+elif media < 4:
+    print(f"Sua média é de: {media:.2f} Reprovado")
